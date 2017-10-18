@@ -33,6 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting,Rails related I18n stuff 
+gem 'rails-i18n', '~> 5.0.0'
+# Bootstrap 4 Ruby Gem for Rails / Sprockets and Compass. 
+gem 'bootstrap', '~> 4.0.0.beta'
+gem 'jquery-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -1,0 +1,31 @@
+<h1 align="center">Pagina Inicial</h1>
+<h5 align="center">Postagens</h5>
+<% @posts.each_with_index do |post,i| %>
+	<% if i==0 %>
+	<div class="jumbotron" align="center">
+		<h1 class="display-3"><%= post.title %></h1>
+		<p class="lead">Categoria:<%= link_to post.category.name, post.category %></p>
+		<h4><%= post.body %></h4>
+		<p class="lead">Autor:<%= post.author %></p>
+  	</div>
+  	
+	<% else %>
+		<%if i==1%>
+			<div class="row marketing">
+		<%end%>
+		<div class="col-lg-6">
+		  <h3><%= post.title %></h3>
+		  <h5><%= post.body %></h5>
+		  <p>Categoria:<%= link_to post.category.name, post.category %><br> Autor:<%= post.author %></p>
+		</div>
+		<% next%>
+		<div class="col-lg-6">
+		  <h3><%= post.title %></h3>
+		  <h5><%= post.body %></h5>
+		  <p>Categoria:<%= link_to post.category.name, post.category %><br> Autor:<%= post.author %></p>
+		</div>
+		</div>
+	<% end %>
+	
+<% end %>
+
